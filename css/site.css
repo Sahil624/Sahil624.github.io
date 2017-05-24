@@ -15,7 +15,7 @@ nav div ul li a,nav div a{
     color: black;
 }
 
-.container{
+.containera{
     background: rgba(179,229,252,.5);
     border-radius:10%;
 }
@@ -34,11 +34,10 @@ nav div ul li a,nav div a{
 }
 
 .about p{
-    font-size: 2em;
+    font-size: 1.7em;
 }
 
-.downt{
-    position: absolute;
-    left: 50%;
-    top: 190%;
+.projects{
+    position: relative;
+    top:30%;
 }
