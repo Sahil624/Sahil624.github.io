@@ -18,13 +18,13 @@ $('document').ready(function(){
 
 
 
-        if(scrolled>=pf-100 && scrolled <about-100){
+        if(scrolled>=pf-100 && scrolled <about-50){
             $('.pf-btn').addClass('active');
             $('.ab-btn').removeClass('active');
             $('.cn-btn').removeClass('active');
         }
 
-        else if(scrolled >= about-100 && scrolled < contact-100){
+        else if(scrolled >= about-50 && scrolled < contact-100){
             $('.pf-btn').removeClass('active');
             $('.ab-btn').addClass('active');
             $('.cn-btn').removeClass('active');
@@ -47,8 +47,8 @@ $('document').ready(function(){
         console.log('Clicked');
     })
 
-    $('#img').hover(function(){
-        $('.caption-content').show(500);
+    $('.img-responsive').hover(function(){
+        $('.caption-content').show(100);
         $(this).css({opacity:.5+'px'});
         console.log('Show');
     },function(){
