@@ -7,6 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { HomeComponent } from './components/home/home.component';
+
+import { HeaderModule } from './components/header/header.module';
+import { HomeModule } from './components/home/home.module';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -15,7 +21,10 @@ import { environment } from '../environments/environment';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    MatSidenavModule,
+    HeaderModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
