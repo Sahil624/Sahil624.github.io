@@ -1,9 +1,10 @@
-baseURL = "https://sahil624.github.io"
+baseURL = "https://isahil.me"
 languageCode = "en-us"
 title = "Sahil M"
 theme = "hugo-profile"
 Paginate = 3
 enableRobotsTXT = true
+googleAnalytics = 'G-FNK6G1Q9P7'
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
