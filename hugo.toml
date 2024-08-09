@@ -5,6 +5,7 @@ theme = "hugo-profile"
 Paginate = 3
 enableRobotsTXT = true
 googleAnalytics = 'G-FNK6G1Q9P7'
+canonifyURLs=true
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
