@@ -66,7 +66,7 @@ intro = "Hi, my name is"
 title = "Sahil Mangotra."
 subtitle = "I build things for the web"
 content = "A passionate web app developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
-image = "/images/sahil.jpeg"
+image = "/sahil.jpeg"
 
 [params.hero.bottomImage]
 enable = true
@@ -93,7 +93,7 @@ url = "https://x.com/Sahilmangotra1"
 [params.about]
 enable = true
 title = "About Me"
-image = "/images/me.jpeg"
+image = "/me.jpeg"
 content = """
 
 Here’s an enhanced version of your bio that highlights your expertise and passion in a more engaging way:
@@ -268,7 +268,7 @@ url = "https://github.com/Sahil624/python-network-sniffer"
 enable = true
 content = "My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!"
 btnName = "Mail me"
-btnLink = "mailto:gurusabarisha@gmail.com"
+btnLink = "mailto:hi@isahil.me"
 
 [params.footer.recentPosts]
 path = "blogs"
