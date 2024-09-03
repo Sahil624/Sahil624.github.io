@@ -14,12 +14,12 @@ page = ["HTML", "RSS"]
 [markup.goldmark.renderer]
 unsafe = true
 
-# [[Menus.main]]
-# identifier = "blog"
-# name = "Blog"
-# title = "Blog posts"
-# url = "/blogs"
-# weight = 1
+[[Menus.main]]
+identifier = "blog"
+name = "Blog"
+title = "Blog posts"
+url = "https://blog.isahil.me/"
+weight = 1
 
 # [[Menus.main]]
 # identifier = "gallery"
@@ -122,10 +122,25 @@ items = [
 enable = true
 
 [[params.experience.items]]
+job = "Graduate Research Assistant"
+company = "Kennesaw State University"
+companyUrl = "https://www.kennesaw.edu/ccse/index.php"
+date = "August 2024 - Present"
+content = """
+Collaborated with Dr. Abhishek Prakash to develop an AI-driven Quantum Computing Course Generator, personalizing content based on student learning patterns and proficiency. Designed adaptive algorithms integrating quantum computing and AI to create a dynamic educational platform. Conducted research and data analysis to optimize tool performance for accurate, personalized learning experiences.
+"""
+
+[params.experience.items.featuredLink]
+enable = true
+name = "Kennesaw State University"
+url = "https://www.kennesaw.edu/ccse/index.php"
+
+
+[[params.experience.items]]
 job = "Lead Software Engineer"
 company = "uTrade Solutions"
 companyUrl = "https://utradesolutions.com"
-date = "September 2023 - Present"
+date = "September 2023 - July 2024"
 content = """
 Leading the development and optimization of market data flow systems, enhancing real-time trading platforms, and mentoring new hires to ensure high standards in software development.
 """
@@ -134,6 +149,7 @@ Leading the development and optimization of market data flow systems, enhancing 
 enable = true
 name = "uTrade Solutions"
 url = "https://utradesolutions.com"
+
 
 [[params.experience.items]]
 job = "Senior Software Engineer"
@@ -181,6 +197,20 @@ url = "https://utradesolutions.com"
 enable = true
 index = false
 
+
+[[params.education.items]]
+title = "Master of Science in Computer Science (AI Concentration)"
+date = "Expected Graduation: 2026"
+# GPA = "3.83 out of 4.0"
+content = """
+Engaged in advanced AI and ML coursework, applying theory to practical problems, and collaborated on a capstone project to design an AI-based recommendation system that improved user engagement by 30% in simulations.
+"""
+
+[params.education.items.school]
+name = "Kennesaw State University"
+url = "https://www.kennesaw.edu/ccse/index.php"
+
+
 [[params.education.items]]
 title = "Bachelor of Engineering in Computer Science"
 date = "2015 - 2019"
@@ -213,28 +243,25 @@ content = "I solved all problems with optimal solution."
 url = "https://example.com"
 image = "/images/achievment.jpg"
 
-[[params.achievements.items]]
-title = "Facebook Hackathon Winner"
-content = "Developed a product using Artificial Intelligence."
-image = "/images/achievment.jpg"
-
-[[params.achievements.items]]
-title = "Hugo Profile"
-content = "Developed a theme and getting 1K+ downloads per month."
-url = "https://github.com/gurusabarish/hugo-profile"
-image = "/images/achievment.jpg"
-
-[[params.achievements.items]]
-title = "Microsoft Imagine Runner"
-content = "We are developed a product which can help others."
-
-[[params.achievements.items]]
-title = "Google Summer of Code"
-content = "Contributed to a open source project."
-url = "https://example.com"
-
 [params.projects]
 enable = true
+
+
+[[params.projects.items]]
+title = "Quick Notes"
+content = """
+"Quick Notes" is an Angular-based application designed for creating and managing notes. It uses Firebase as the backend for storage and authentication. The project is set up with GitHub Actions to automate the deployment process, allowing the application to be seamlessly deployed on GitHub Pages.
+"""
+image = "/quick_note.png"
+badges = ["Angular", "Firebase"]
+
+[params.projects.items.featured]
+name = "App"
+link = "https://quicknote.isahil.me/"
+
+[[params.projects.items.links]]
+icon = "fab fa-github"
+url = "https://github.com/Sahil624/quick-note"
 
 [[params.projects.items]]
 title = "Chatting and Media Sharing Application Backend"
