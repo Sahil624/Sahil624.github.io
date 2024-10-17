@@ -13,12 +13,7 @@ tags = [
     "multithreading vs multiprocessing",
     "asynchronous programming",
     "microservices architecture",
-    "fintech development",
-    "concurrent programming",
-    "Python concurrency models",
-    "Golang vs Python benchmarks",
-    "software development best practices",
-    "high-performance computing"
+    "Golang vs Python benchmarks"
 ]
 author= ["Me"]
 +++

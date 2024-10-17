@@ -5,18 +5,9 @@ draft = false
 summary = "Discover how to optimize course scheduling with precedence constraints using topological sorting and dynamic programming. This blog provides a step-by-step guide and Python code examples to solve complex scheduling problems."
 tags = [
     "precedence-based knapsack problem",
-    "course scheduling optimization",
-    "topological sort in knapsack",
+    "topological sort",
     "dynamic programming knapsack",
-    "knapsack problem with prerequisites",
-    "precedence constraints in knapsack",
     "optimal course scheduling",
-    "solving knapsack problem",
-    "topological sorting algorithm",
-    "knapsack problem Python example",
-    "course scheduling algorithms",
-    "project management optimization",
-    "dependency constraints optimization",
     "complex knapsack problem",
     "real-world knapsack applications"
 ]

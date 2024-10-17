@@ -13,12 +13,8 @@ tags = [
   "real-time data management",
   "trading app development",
   "fintech scalability",
-  "Python vs Golang",
-  "building trading platforms",
   "high-frequency trading systems",
   "financial technology",
-  "trading software architecture",
-  "stock market app design",
   "optimizing trading platforms"
 ]
 author= ["Me"]
