@@ -100,9 +100,6 @@ enable = true
 title = "About Me"
 image = "/me.jpeg"
 content = """
-
-Here’s an enhanced version of your bio that highlights your expertise and passion in a more engaging way:
-
 I am a seasoned software developer with a deep passion for web development and a solid foundation in computer science and mathematics. I thrive at the intersection of technology and art, constantly seeking innovative ways to blend these fields. Currently, I am a Lead Software Engineer at [uTrade Solutions.](https://utradesolutions.com/) in Mohali, Punjab, India.
 
 At uTrade Solutions, I lead the development of cutting-edge projects focused on automating stock market trading using sophisticated algorithms. My work involves designing and implementing robust trading platforms that empower users to trade efficiently and effectively.
