@@ -79,7 +79,7 @@ enable = true
 [params.hero.button]
 enable = true
 name = "Resume"
-url = "https://drive.google.com/file/d/1ZJhGAzUhp1YdrUzpWqoUrAzwHlmhhWVy/view"
+url = "https://docs.google.com/document/d/1SUbgJZcg_6top9cRryehffSKGWhR2sKzFaBWZ_ZhGwQ/edit?usp=sharing"
 download = true
 newPage = false
 
