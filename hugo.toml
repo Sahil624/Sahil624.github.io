@@ -69,8 +69,8 @@ disableContact = false
 enable = true
 intro = "Hi, my name is"
 title = "Sahil Mangotra."
-subtitle = "I build things for the web"
-content = "A passionate web app developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+subtitle = "Software Engineer → AI"
+content = "I'm a passionate web app developer with a strong focus on modern web technologies to create websites that look great, feel intuitive, and perform flawlessly. Previously a software engineer, I'm now pursuing a master's in Computer Science with a concentration in AI."
 image = "/sahil.jpeg"
 
 [params.hero.bottomImage]
@@ -100,11 +100,9 @@ enable = true
 title = "About Me"
 image = "/me.jpeg"
 content = """
-I am a seasoned software developer with a deep passion for web development and a solid foundation in computer science and mathematics. I thrive at the intersection of technology and art, constantly seeking innovative ways to blend these fields. Currently, I am a Lead Software Engineer at [uTrade Solutions.](https://utradesolutions.com/) in Mohali, Punjab, India.
+I'm a seasoned software developer with a strong foundation in computer science and mathematics, passionate about web development and innovative tech solutions. I previously served as a Lead Software Engineer at uTrade Solutions in Mohali, India, where I led projects in algorithmic trading, optimized database operations, and guided teams in microservice architecture transitions to enhance trading performance and system efficiency.
 
-At uTrade Solutions, I lead the development of cutting-edge projects focused on automating stock market trading using sophisticated algorithms. My work involves designing and implementing robust trading platforms that empower users to trade efficiently and effectively.
-
-With a keen eye for detail and a dedication to creating seamless user experiences, I continually push the boundaries of what’s possible in web development. Whether mentoring junior developers, optimizing database operations, or enhancing web security, I bring a comprehensive skill set and a collaborative spirit to every project.
+Currently, I'm advancing my expertise through a master’s in Computer Science with a concentration in AI. My research focuses on integrating AI into adaptive learning platforms, expanding my skills at the cutting edge of technology. Whether I'm mentoring junior developers, optimizing tech solutions, or exploring new AI applications, I bring a comprehensive skill set and a collaborative spirit to every endeavor.
 ."""
 
 [params.about.skills]
@@ -114,10 +112,12 @@ items = [
   "Golang",
   "Django",
   "Python",
-  "FastAPI",
   "Postgres SQL",
   "Kafka",
   "Angular",
+  "Docker",
+  "PyTorch",
+  "FastAI"
 ]
 
 [params.experience]
@@ -129,7 +129,9 @@ company = "Kennesaw State University"
 companyUrl = "https://www.kennesaw.edu/ccse/index.php"
 date = "August 2024 - Present"
 content = """
-Collaborated with Dr. Abhishek Prakash to develop an AI-driven Quantum Computing Course Generator, personalizing content based on student learning patterns and proficiency. Designed adaptive algorithms integrating quantum computing and AI to create a dynamic educational platform. Conducted research and data analysis to optimize tool performance for accurate, personalized learning experiences.
+- Collaborated with Dr. Abhishek Prakash to develop an AI-driven Quantum Computing Course Generator, personalizing content based on student learning patterns and proficiency.
+- Designed adaptive algorithms integrating quantum computing and AI to create a dynamic educational platform. 
+- Conducted research and data analysis to optimize tool performance for accurate, personalized learning experiences.
 """
 
 [params.experience.items.featuredLink]
@@ -144,7 +146,13 @@ company = "uTrade Solutions"
 companyUrl = "https://utradesolutions.com"
 date = "September 2023 - July 2024"
 content = """
-Leading the development and optimization of market data flow systems, enhancing real-time trading platforms, and mentoring new hires to ensure high standards in software development.
+- Led architectural and management initiatives to design a new algo-based trading platform, which was well-received
+by management and business partners
+- Fostered collaboration with the Exchange end adapter teams, enhancing the flow of market data for real-time insights
+- Provided mentoring and training to new hires and interns, enhancing their trading expertise and technical skills
+- Made strategic decisions to innovate trading platforms, which resulted in enhanced system performance
+- Planned the migration of legacy monolithic architecture to micro-service architecture, adding new technologies like
+Golang and Kafka. This resulted in a 15% enhancement in the turnaround time for development and deployment
 """
 
 [params.experience.items.featuredLink]
@@ -159,7 +167,11 @@ company = "uTrade Solutions"
 companyUrl = "https://utradesolutions.com"
 date = "September 2020 - October 2023"
 content = """
-Developed user-driven trading algorithm platforms, managed complex projects independently, and optimized SQL databases for high-volume data, ensuring robust web application security.
+- Developed a user-driven platform for creating trading algorithms, significantly improving user engagement
+- Worked with the Exchange end adapter teams to optimise market data flow, improving data reception speed by 30%
+using new compression techniques and optimising market data packets
+- Executed optimal SQL database operations, effectively handling millions of rows of market data. I designed and
+implemented in-house sharding and buffering of this data to combine multiple rows into one on the fly
 """
 
 [params.experience.items.featuredLink]
@@ -168,12 +180,16 @@ name = "uTrade Solutions"
 url = "https://utradesolutions.com"
 
 [[params.experience.items]]
-job = "Full-stack Developer"
+job = "Software Developer"
 company = "uTrade Solutions"
 companyUrl = "https://utradesolutions.com"
 date = "June 2019 - September 2020"
 content = """
-Created a lite trading platform and mobile app for new users, developed REST-based backend for multi-app connectivity, and led UI revamp projects, earning recognition from senior management.
+- Developed and implemented a simplified version of the trading platform that features a 30% smaller build size and
+was developed with low-end devices in mind, thus broadening the market reach to new clients
+- Developed a mobile application using Ionic that facilitates trading on the go for clients
+- Designed a REST-based server, which enabled multiple apps to connect to the backend as a Platform as a Service
+- Contributed to a successful UI redesign, receiving praise from senior management
 """
 
 [params.experience.items.featuredLink]
@@ -187,7 +203,9 @@ company = "uTrade Solutions"
 companyUrl = "https://utradesolutions.com"
 date = "June 2018 - May 2019"
 content = """
-Collaborated with the Product Team on fintech requirements, coded software changes per design specifications, and presented solutions to senior executives, gaining hands-on experience in network analytics tools.
+- Collaborated with the Product Team to establish the business specifications within the Fintech domain
+- Solved complex technical issues using modern mobile and web technologies
+- Presented technical solutions to senior executives, facilitating informed decision-making
 """
 
 [params.experience.items.featuredLink]
@@ -250,6 +268,22 @@ enable = true
 
 
 [[params.projects.items]]
+title = "Day Canvas"
+content = """
+'DayCanvas' converts daily journal entries into animated story sequences. Users write about their day, and our platform transforms their experiences into fantasy-style visual narratives, creating a parallel universe that reflects their emotional journey in a creative and engaging way.
+"""
+image = "/daycanvas.jpeg"
+badges = ["AI", "Claude", "Imagen3", "Gemini", "Django"]
+
+[params.projects.items.featured]
+name = "Demo"
+link = "https://www.youtube.com/watch?v=0QzIm0jzxBM"
+
+[[params.projects.items.links]]
+icon = "fab fa-github"
+url = "https://github.com/Sahil624/DayCanvas"
+
+[[params.projects.items]]
 title = "Quick Notes"
 content = """
 "Quick Notes" is an Angular-based application designed for creating and managing notes. It uses Firebase as the backend for storage and authentication. The project is set up with GitHub Actions to automate the deployment process, allowing the application to be seamlessly deployed on GitHub Pages.
@@ -272,14 +306,6 @@ Developed a comprehensive chatting system with capabilities for one-to-one chat,
 """
 image = "https://yt3.googleusercontent.com/ytc/AIdro_ls60_itXZv6S8fpzhGHU7SIMBaf9cHML-MLYBdyAF38Q=s160-c-k-c0x00ffffff-no-rj"
 badges = ["Python", "Django", "WebRTC"]
-
-# [params.projects.items.featured]
-# name = "Gizmoh Communicator"
-# link = "https://gizmohcommunicator.com/"
-
-# [[params.projects.items.links]]
-# icon = "fab fa-github"
-# url = "https://github.com/Sahil624/chatting-media-sharing-backend"
 
 [[params.projects.items]]
 title = "Network Sniffer"
