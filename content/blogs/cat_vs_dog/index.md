@@ -4,7 +4,6 @@ date = 2024-08-28T17:54:29-04:00
 draft = false
 summary = "This Colab notebook demonstrates how to build an dog or cat image classifier using the fastai library."
 series = ["AI",]
-weight = 2
 tags = ["AI", "FastAI", "Machine Learning", "Computer Vision", "Image Classification", "Deep Learning", "Neural Networks", "Convolutional Neural Networks (CNNs)", "Image Recognition", "Artificial Intelligence"]
 author= ["Me"]
 +++
