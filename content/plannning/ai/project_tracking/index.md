@@ -9,23 +9,17 @@ author= ["Me"]
 
 ## 📚 Beginner Level (4.5 months)
 
-### 1. Digit Recognition System
-- [ ] Project Setup
-  - [ ] Setup development environment
-  - [ ] Create GitHub repository
-  - [ ] Setup basic project structure
+### [~~1. Digit Recognition System (Read Blog)~~]({{< ref "/blogs/mnist_digit_classification" >}})
+- [X] Project Setup
+  - [X] Setup development environment
+  - [X] Create GitHub repository
+  - [X] Setup basic project structure
 
-- [ ] Core Implementation
-  - [ ] Data preprocessing pipeline
-  - [ ] Basic model implementation (kNN/SVM)
-  - [ ] Neural network implementation
-  - [ ] Model evaluation framework
-
-- [ ] Extensions
-  - [ ] Web interface for drawing digits
-  - [ ] Webcam integration
-  - [ ] Model comparison dashboard
-  - [ ] Documentation
+- [X] Core Implementation
+  - [X] Data preprocessing pipeline
+  - [X] Basic model implementation (kNN/SVM)
+  - [X] Neural network implementation
+  - [X] Model evaluation framework
 
 ### 2. Customer Churn Predictor
 - [ ] Data Preparation
