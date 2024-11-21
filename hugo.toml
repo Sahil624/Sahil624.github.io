@@ -38,8 +38,9 @@ title = "Sahil"
 description = "Hi there, My name is Sahil Mangotra. I am a software developer and this is my site."
 favicon = "/favicon.ico"
 useBootstrapCDN = false
-mathjax = false
+mathjax = true
 animate = true
+math = true
 
 [params.font]
 fontSize = "1rem"
