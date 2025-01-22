@@ -40,22 +40,14 @@ author= ["Me"]
   - [ ] Performance monitoring
 
 ### 3. News Article Categorizer
-- [ ] Data Collection
-  - [ ] Web scraper development
-  - [ ] Data cleaning pipeline
-  - [ ] Text preprocessing
+- [X] Data Collection
+  - [X] Data cleaning pipeline
+  - [X] Text preprocessing
 
-- [ ] NLP Implementation
-  - [ ] Text vectorization
-  - [ ] Model selection and training
-  - [ ] Category prediction system
-  - [ ] Performance evaluation
-
-- [ ] Enhancement
-  - [ ] Multi-language support
-  - [ ] Real-time classification
-  - [ ] API development
-  - [ ] Documentation
+- [X] NLP Implementation
+  - [X] Model selection and training
+  - [X] Category prediction system
+  - [X] Performance evaluation
 
 ### 4. Stock Price Trend Analyzer
 - [ ] Data Pipeline
