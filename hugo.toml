@@ -5,13 +5,13 @@ theme = "hugo-profile"
 Paginate = 3
 enableRobotsTXT = true
 googleAnalytics = 'G-FNK6G1Q9P7'
-canonifyURLs=true
+canonifyURLs = true
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 page = ["HTML", "RSS"]
 
-  
+
 [minify]
 disableXML = true
 minifyOutput = true
@@ -41,6 +41,7 @@ useBootstrapCDN = false
 mathjax = true
 animate = true
 math = true
+customCSS = true
 
 [params.font]
 fontSize = "1rem"
@@ -92,10 +93,6 @@ url = "https://github.com/Sahil624/"
 icon = "fab fa-x-twitter"
 url = "https://x.com/Sahilmangotra1"
 
-# [[params.hero.socialLinks.customIcons]]
-# icon = "/fav.png"
-# url = "https://example.com"
-
 [params.about]
 enable = true
 title = "About Me"
@@ -118,7 +115,7 @@ items = [
   "Angular",
   "Docker",
   "PyTorch",
-  "FastAI"
+  "FastAI",
 ]
 
 [params.experience]

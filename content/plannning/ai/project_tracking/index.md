@@ -9,7 +9,7 @@ author= ["Me"]
 
 ## 📚 Beginner Level (4.5 months)
 
-### [~~1. Digit Recognition System (Read Blog)~~]({{< ref "/blogs/mnist_digit_classification" >}})
+### [~~1. Digit Recognition System (Read Blog)~~]({{< ref "/blogs/mnist_digit_classification/" >}})
 - [X] Project Setup
   - [X] Setup development environment
   - [X] Create GitHub repository
@@ -39,7 +39,7 @@ author= ["Me"]
   - [ ] Documentation and testing
   - [ ] Performance monitoring
 
-### 3. News Article Categorizer
+### [~~3. News Article Categorizer (Read Blog)~~]({{< ref "/blogs/ag_news_classifier/" >}})
 - [X] Data Collection
   - [X] Data cleaning pipeline
   - [X] Text preprocessing
