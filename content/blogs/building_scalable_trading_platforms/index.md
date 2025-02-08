@@ -1,7 +1,7 @@
 +++
 title = 'Building Scalable Trading Platforms: Key Considerations and Best Practices '
 date = 2024-09-05T21:23:23-04:00
-draft = false
+draft = true
 summary = "Learn how to build a scalable stock trading platform using microservices, concurrency optimization, and real-time data management. Insights from real-world fintech experience."
 tags = [
   "stock trading platform",
