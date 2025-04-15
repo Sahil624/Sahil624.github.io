@@ -73,7 +73,7 @@ intro = "Hi, my name is"
 title = "Sahil Mangotra."
 subtitle = "Software Engineer → AI"
 content = "I'm a passionate web app developer with a strong focus on modern web technologies to create websites that look great, feel intuitive, and perform flawlessly. Previously a software engineer, I'm now pursuing a master's in Computer Science with a concentration in AI."
-image = "/sahil.jpeg"
+image = "/me_santa_monica.jpg"
 
 [params.hero.bottomImage]
 enable = true
