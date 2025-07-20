@@ -113,4 +113,4 @@ This brings us to the core of our journey. Our baseline model is a good start, b
 
 Our goal is simple: to achieve significant improvements in inference speed and model size, while keeping the accuracy as high as possible.
 
-Stay tuned for Part 2, where we'll roll up our sleeves and get started with the magic of model quantization!
+Stay tuned for [Part 2](/blogs/edge_ai_showdown_part_2/), where we'll roll up our sleeves and get started with the magic of model quantization!
