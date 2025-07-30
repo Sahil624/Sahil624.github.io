@@ -8,11 +8,14 @@ tags = ["AI", "Pytorch", "Machine Learning", "Deep Learning", "Neural Networks",
 author= ["Me"]
 +++
 
-Have you ever wondered if a computer could imagine a human face that doesn't exist? Thanks to a clever class of neural networks called Generative Adversarial Networks (GANs), this is not science fiction, but a reality. In this post, we'll walk through the process of building and training a GAN from the ground up to generate photorealistic images of human faces.
+Have you ever wondered if a computer could imagine a human face that doesn't exist? Thanks to a clever class of neural networks called Generative Adversarial Networks (GANs), this is not science fiction, but a reality. Take a look at [https://thispersondoesnotexist.com/](https://thispersondoesnotexist.com/), this site uses [StyleGan](https://arxiv.org/abs/1912.04958) for generating faces that are indistinguishable from real ones. In this post, we'll walk through the process of building and training a very simple GAN from the ground up to generate photorealistic images of human faces.
 
 This project is inspired by and takes reference from the official PyTorch DCGAN tutorial, which you can find [here](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html). We'll be exploring many of the same core concepts.
 
 ### The Core Idea: An Adversarial Game
+
+![](gan.webp)
+<centre><sub><sup>[Original Image Source](https://commons.wikimedia.org/wiki/File:GANs_Technique.webp)</sup></sub></centre>
 
 A GAN consists of two neural networks locked in a head-to-head competition:
 
@@ -60,12 +63,11 @@ D_FEATURES = 64
 BETA1=0.5
 LR=0.0002
 NUM_EPOCHS=10
-
 ```
 
 ### Step 1: Finding and Prepping the Dataset
 
-For our project, we used the **CelebFaces Attributes (CelebA) Dataset**, which is a massive public dataset with over 200,000 images of celebrity faces.
+For our project, we used the [**CelebFaces Attributes (CelebA) Dataset**](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html), which is a massive public dataset with over 200,000 images of celebrity faces.
 
 Before feeding these images to our model, we need to process them. This involves:
 *   **Resizing and Cropping:** All images are resized to a standard 64x64 pixels.
@@ -107,7 +109,7 @@ plt.show()
 
 ### Step 2: Designing the Model Architecture
 
-We're building a specific type of GAN called a **Deep Convolutional Generative Adversarial Network (DCGAN)**. This architecture uses convolutional layers to effectively process images.
+We're building a specific type of GAN called a [**Deep Convolutional Generative Adversarial Network (DCGAN)**](https://arxiv.org/abs/1511.06434). This architecture uses convolutional layers to effectively process images.
 
 A key step [highlighted in the official PyTorch DCGAN tutorial](https://docs.pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html#weight-initialization) is the proper initialization of model weights. To help the networks converge effectively, the tutorial advises initializing the weights for all convolutional, convolutional-transpose, and batch normalization layers from a Normal distribution with a mean of 0 and a standard deviation of 0.02. We implement this with a weights_init function, which is applied to both the generator and discriminator immediately after they are created.
 
@@ -294,83 +296,116 @@ This process is repeated for 10 epochs. The loss function we use is Binary Cross
 
 
 ```python
-img_list = []
-G_losses = []
-D_losses = []
-iters = 0
+# Initialize tracking variables for training progress
+img_list = []    # Store generated images at checkpoints
+G_losses = []    # Track generator losses over time
+D_losses = []    # Track discriminator losses over time
+iters = 0        # Global iteration counter
 
-# https://docs.pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html#training
+# DCGAN Training Loop
+# Reference: https://docs.pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html#training
 print("Starting Training Loop...")
+
 for epoch in range(NUM_EPOCHS):
     for i, data in enumerate(dataloader):
         
         ############################
-        # (1) Update D network: maximize log(D(x)) + log(1 - D(G(z)))
-        ###########################
-        ## Train with all-real batch
-        netD.zero_grad()
-        # Format batch
+        # PHASE 1: Update Discriminator Network
+        # Goal: maximize log(D(x)) + log(1 - D(G(z)))
+        # This means: correctly classify real images as real AND fake images as fake
+        ############################
+        
+        # === TRAIN DISCRIMINATOR ON REAL IMAGES ===
+        netD.zero_grad()  # Clear discriminator gradients
+        
+        # Prepare real image batch
         real_cpu = data[0].to(device)
         b_size = real_cpu.size(0)
         label = torch.full((b_size,), real_label, dtype=torch.float, device=device)
-        # Forward pass real batch through D
+        
+        # Forward pass: discriminator classifies real images
         output = netD(real_cpu).view(-1)
-        # Calculate loss on all-real batch
+        
+        # Calculate loss: how well D identifies real images as real
         errD_real = criterion(output, label)
-        # Calculate gradients for D in backward pass
+        
+        # Backward pass: compute gradients for real image classification
         errD_real.backward()
-        D_x = output.mean().item()
-
-        ## Train with all-fake batch
-        # Generate batch of latent vectors
+        D_x = output.mean().item()  # Average discriminator output on real images
+        
+        
+        # === TRAIN DISCRIMINATOR ON FAKE IMAGES ===
+        # Generate batch of random noise vectors
         noise = torch.randn(b_size, LATENT_DIM, 1, 1, device=device)
-        # Generate fake image batch with G
+        
+        # Generate fake images using generator
         fake = netG(noise)
-        label.fill_(fake_label)
-        # Classify all fake batch with D
+        label.fill_(fake_label)  # Set labels to "fake" for this batch
+        
+        # Forward pass: discriminator classifies fake images
+        # Note: .detach() prevents gradients from flowing back to generator
         output = netD(fake.detach()).view(-1)
-        # Calculate D's loss on the all-fake batch
+        
+        # Calculate loss: how well D identifies fake images as fake
         errD_fake = criterion(output, label)
-        # Calculate the gradients for this batch, accumulated (summed) with previous gradients
+        
+        # Backward pass: accumulate gradients with previous real image gradients
         errD_fake.backward()
-        D_G_z1 = output.mean().item()
-        # Compute error of D as sum over the fake and the real batches
+        D_G_z1 = output.mean().item()  # Average discriminator output on fake images
+        
+        # Total discriminator error and update
         errD = errD_real + errD_fake
-        # Update D
-        optimizerD.step()
-
+        optimizerD.step()  # Apply discriminator parameter updates
+        
+        
         ############################
-        # (2) Update G network: maximize log(D(G(z)))
-        ###########################
-        netG.zero_grad()
-        label.fill_(real_label)  # fake labels are real for generator cost
-        # Since we just updated D, perform another forward pass of all-fake batch through D
+        # PHASE 2: Update Generator Network
+        # Goal: maximize log(D(G(z)))
+        # This means: fool the discriminator into thinking fake images are real
+        ############################
+        
+        netG.zero_grad()  # Clear generator gradients
+        
+        # We want the discriminator to classify our fake images as real
+        label.fill_(real_label)
+        
+        # Forward pass: discriminator re-evaluates the same fake images
+        # Note: No .detach() here - we want gradients to flow back to generator
         output = netD(fake).view(-1)
-        # Calculate G's loss based on this output
+        
+        # Calculate generator loss: how well G fools the discriminator
         errG = criterion(output, label)
-        # Calculate gradients for G
+        
+        # Backward pass: compute gradients for generator
         errG.backward()
-        D_G_z2 = output.mean().item()
-        # Update G
+        D_G_z2 = output.mean().item()  # Discriminator output on fake images (after D update)
+        
+        # Update generator parameters
         optimizerG.step()
-
-        # Output training stats
+        
+        
+        ############################
+        # LOGGING AND CHECKPOINTS
+        ############################
+        
+        # Print training statistics every 50 iterations
         if i % 50 == 0:
             print('[%d/%d][%d/%d]\tLoss_D: %.4f\tLoss_G: %.4f\tD(x): %.4f\tD(G(z)): %.4f / %.4f'
                   % (epoch, NUM_EPOCHS, i, len(dataloader),
                      errD.item(), errG.item(), D_x, D_G_z1, D_G_z2))
-
-        # Save Losses for plotting later
+        
+        # Save losses for plotting training curves later
         G_losses.append(errG.item())
         D_losses.append(errD.item())
-
-        # Check how the generator is doing by saving G's output on fixed_noise
+        
+        # Generate and save sample images at checkpoints
         if (iters % 500 == 0) or ((epoch == NUM_EPOCHS-1) and (i == len(dataloader)-1)):
-            with torch.no_grad():
-                fake = netG(fixed_noise).detach().cpu()
+            with torch.no_grad():  # Disable gradient computation for inference
+                fake = netG(fixed_noise).detach().cpu()  # Generate images from fixed noise
+            # Create grid of images and add to list for visualization
             img_list.append(vutils.make_grid(fake, padding=2, normalize=True))
-
-        iters += 1
+        
+        iters += 1  # Increment global iteration counter
 ```
 <div style="height:600px;overflow: auto;margin-bottom: 16px;">
 
