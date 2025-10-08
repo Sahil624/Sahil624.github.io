@@ -1,0 +1,19 @@
+{
+  "name": "Sahil",
+  "intro": "Welcome to my little corner of the internet. This is just a casual collection of my digital spaces and things I'm currently into. Feel free to look around and leave a note in the guestbook!",
+  "links": [
+    {
+      "title": "Instagram",
+      "description": "Photos & daily stories",
+      "url": "https://www.instagram.com/1997sahil"
+    },
+    {
+      "title": "Twitter / X",
+      "description": "Random thoughts & tech stuff",
+      "url": "https://x.com/Sahilmangotra1"
+    }
+  ],
+  "draggableStickers": [  ],
+  "widgets": {
+  }
+}
