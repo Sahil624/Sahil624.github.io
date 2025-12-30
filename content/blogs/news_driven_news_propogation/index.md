@@ -1,5 +1,5 @@
 +++
-title = 'Analyzing Systemic Risk With NewsDriven Knowledge Graph And Propogation Algorithms'
+title = 'The "Butterfly Effect" in Finance is real. Here is how I visualized it with AI.'
 date = 2025-12-30T13:55:37-05:00
 draft = false
 summary = """The global financial ecosystem is a deeply interconnected web where entities, ranging from multinational corporations to key executives, are linked in complex ways. Shaking one of entity often sends immediate and no-obvious ripples down this web. Due to the sheer size of the financial world, these critical connections remain hidden from human eye, buried under massive volumes of financial information like corporate releases, financial news etc.
@@ -11,6 +11,8 @@ series = ["AI",]
 tags = ["AI", "Pytorch", "Machine Learning", "Deep Learning", "Neural Networks", "Artificial Intelligence"]
 author= ["Me"]
 +++
+
+**Note: This post is a web-adapted version of my formal project report; if you prefer the original format, you can view the [PDF here](files/AI_report.pdf)**
 
 _Abstract_- The global financial ecosystem is a deeply interconnected web where entities, ranging from multinational corporations to key executives, are linked in complex ways. Shaking one of entity often sends immediate and no-obvious ripples down this web. Due to the sheer size of the financial world, these critical connections remain hidden from human eye, buried under massive volumes of financial information like corporate releases, financial news etc.
 
