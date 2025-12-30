@@ -2,7 +2,6 @@ baseURL = "https://isahil.me"
 languageCode = "en-us"
 title = "Sahil M"
 theme = "hugo-profile"
-Paginate = 3
 enableRobotsTXT = true
 googleAnalytics = 'G-FNK6G1Q9P7'
 canonifyURLs = true
@@ -81,7 +80,7 @@ enable = true
 [params.hero.button]
 enable = true
 name = "Resume"
-url = "https://docs.google.com/document/d/1SUbgJZcg_6top9cRryehffSKGWhR2sKzFaBWZ_ZhGwQ/edit?usp=sharing"
+url = "static/files/A_RESUME_2.pdf"
 download = true
 newPage = false
 
