@@ -10,6 +10,9 @@ canonifyURLs = true
 home = ["HTML", "RSS", "JSON"]
 page = ["HTML", "RSS"]
 
+[services]
+  [services.disqus]
+    shortname = 'Sahil M'
 
 [minify]
 disableXML = true
