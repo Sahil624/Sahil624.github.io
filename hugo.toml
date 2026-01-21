@@ -12,7 +12,7 @@ page = ["HTML", "RSS"]
 
 [services]
   [services.disqus]
-    shortname = 'Sahil M'
+    shortname = 'isahilme'
 
 [minify]
 disableXML = true
