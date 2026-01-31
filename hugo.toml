@@ -83,7 +83,7 @@ enable = true
 [params.hero.button]
 enable = true
 name = "Resume"
-url = "static/files/A_RESUME_2.pdf"
+url = "static/files/SAHIL_RESUME.pdf"
 download = true
 newPage = false
 
