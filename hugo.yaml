@@ -77,7 +77,7 @@ params:
     button:
       enable: true
       name: Resume
-      url: static/files/SAHIL_RESUME.pdf
+      url: files/SAHIL_RESUME.pdf
       download: true
       newPage: false
     socialLinks:
@@ -99,84 +99,119 @@ params:
       architecture transitions to enhance trading performance and system
       efficiency.
 
-
-      Currently, I'm advancing my expertise through a master’s in Computer Science with a concentration in AI. My research focuses on integrating AI into adaptive learning platforms, expanding my skills at the cutting edge of technology. Whether I'm mentoring junior developers, optimizing tech solutions, or exploring new AI applications, I bring a comprehensive skill set and a collaborative spirit to every endeavor.
-
-      .
+      Currently, I'm advancing my expertise through a master’s in Computer Science 
+      with a concentration in AI. My research focuses on integrating AI into adaptive 
+      learning platforms, expanding my skills at the cutting edge of technology. 
+      Whether I'm mentoring junior developers, optimizing tech solutions, or 
+      exploring new AI applications, I bring a comprehensive skill set and a 
+      collaborative spirit to every endeavor.
+      
     skills:
       enable: true
       title: "Here are a few technologies I've been working with recently:"
       items:
         - Golang
-        - Django
         - Python
         - Postgres SQL
         - Kafka
-        - Angular
-        - Docker
+        - React
         - PyTorch
-        - FastAI
   experience:
     enable: true
     items:
-      - job: Graduate Research Assistant
-        company: Kennesaw State University
+      - company: Kennesaw State University
         companyUrl: https://www.kennesaw.edu/ccse/index.php
-        date: August 2024 - Present
-        content: >
-          - Engineered a production-grade RAG pipeline using LangChain and Llama-based models to dynamically synthesize 
-            curricula from complex technical documentation, enhancing adaptive learning delivery.
+        jobs:
+          - name: "Graduate Research Assistant"
+            date: "August 2024 - Present"
+            content: |
+              - Engineered a production-grade RAG pipeline using LangChain and Llama-based models to dynamically synthesize 
+                curricula from complex technical documentation, enhancing adaptive learning delivery.
 
-          - Designed a hybrid network simulator featuring autonomous AI agents for natural language topology generation and 
-            automated log analysis to translate system metrics into human-readable insights 
+              - Designed a hybrid network simulator featuring autonomous AI agents for natural language topology generation and 
+                automated log analysis to translate system metrics into human-readable insights 
 
-          - Optimized the NSF-funded "QUINTET" agents using Chain-of-Thought and Sandwich prompting strategies, driving a 
-            111% increase in Faithfulness (0.38 to 0.80) and achieving a 0.735 overall RAGAS validation score. 
-          
-          - Architected a Reinforcement Learning from Human Feedback (RLHF) pipeline using Direct Preference Optimization 
-            (DPO), leveraging student preference datasets to align agent outputs for educational accuracy. 
-        featuredLink:
-          enable: true
-          name: Kennesaw State University
-          url: https://www.kennesaw.edu/ccse/index.php
-      - job: Software Engineer
-        company: uTrade Solutions
+              - Optimized the NSF-funded "QUINTET" agents using Chain-of-Thought and Sandwich prompting strategies, driving a 
+                111% increase in Faithfulness (0.38 to 0.80) and achieving a 0.735 overall RAGAS validation score. 
+              
+              - Architected a Reinforcement Learning from Human Feedback (RLHF) pipeline using Direct Preference Optimization 
+                (DPO), leveraging student preference datasets to align agent outputs for educational accuracy. 
+      - company: uTrade Solutions
         companyUrl: https://utradesolutions.com
-        date: September 2019 - July 2024
-        content: >
-          - Developed a scalable algo-trading platform, architecting it to handle 500+ concurrent custom trading algorithms and 
-            a 10K+ retail traders within the first quarter of launch, demonstrating experience with high-volume, real-time data processing.
+        jobs:
+          - name: "Lead Software Engineer"
+            date: "Sep 2023 - July 2024"
+            content: |
+              - Led a cross-functional engineering team to plan and execute a major architectural pivot, migrating a legacy 
+                monolith to a scalable microservices architecture utilizing Golang and Kafka.
 
-          - Optimized data reception speed by 30% through custom compression algorithms and in-house database sharding 
-            solutions, enhancing the platform's ability to handle millions of real-time market data rows.
+              - Achieved a 40% enhancement in the turnaround time for development and deployment cycles through this 
+                strategic microservices migration.
 
-          - Planned the migration of legacy monolithic architecture to micro-service architecture, adding new technologies like 
-            Golang and Kafka. This resulted in a 40% enhancement in the turnaround time for development and deployment
+              - Developed a custom market data compression algorithm utilizing low-level C structs and smart packet 
+                concatenation, drastically reducing payload size and optimizing data reception speed by 30%.
 
-          - Gained experience working with distributed systems concepts while developing the algo-trading platform, which 
-            involved coordinating multiple processes and managing data consistency across different components
+          - name: "Senior Software Engineer"
+            date: "Sep 2020 - Sep 2023"
+            content: |
+              - Developed a highly scalable algo-trading platform backend using Golang and Python, successfully handling 
+                500+ concurrent custom trading algorithms and over 10,000 retail traders within the first quarter of 
+                launch. Demonstrating experience with high-volume, real-time data processing.
 
-          - Planned the migration of legacy monolithic architecture to micro-service architecture, adding new technologies like
-            Golang and Kafka. This resulted in a 15% enhancement in the turnaround time for development and deployment
-        featuredLink:
-          enable: true
-          name: uTrade Solutions
-          url: https://utradesolutions.com
-      - job: Full-stack Developer Intern
-        company: uTrade Solutions
-        companyUrl: https://utradesolutions.com
-        date: June 2018 - May 2019
-        content: >
-          - Collaborated with the Product Team to establish the business
-          specifications within the Fintech domain
+              - Designed high-throughput real-time data pipelines, processing hundreds of messages per second by 
+                implementing TCP sockets for internal microservices and WebSockets with custom compression for end-clients.
 
-          - Solved complex technical issues using modern mobile and web technologies
+              - Optimized PostgreSQL databases handling millions of rows by implementing advanced indexing, sharding, and 
+                decoupling read/write replicas to support millisecond-level financial market data writes.
+              
+              - Collaborated independently with Exchange end-adapter teams to ensure seamless, low-latency market data integration.
+            
+          - name: "Software Engineer"
+            date: "June 2010 - Sep 2020"
+            content: |
+              - Developed a new scalable REST-based backend using Django, functioning as a Platform-as-a-Service (PaaS) to allow 
+                multiple external B2B applications to connect seamlessly.
 
-          - Presented technical solutions to senior executives, facilitating informed decision-making
-        featuredLink:
-          enable: true
-          name: uTrade Solutions
-          url: https://utradesolutions.com
+              - Developed a lightweight version of the core trading platform and built a cross-platform mobile application 
+                (iOS/Android) using the Ionic framework, driving new B2B client onboarding.
+      # - job: Software Engineer
+      #   company: uTrade Solutions
+      #   companyUrl: https://utradesolutions.com
+      #   date: September 2019 - July 2024
+      #   content: >
+      #     - Developed a scalable algo-trading platform, architecting it to handle 500+ concurrent custom trading algorithms and 
+      #       a 10K+ retail traders within the first quarter of launch, demonstrating experience with high-volume, real-time data processing.
+
+      #     - Optimized data reception speed by 30% through custom compression algorithms and in-house database sharding 
+      #       solutions, enhancing the platform's ability to handle millions of real-time market data rows.
+
+      #     - Planned the migration of legacy monolithic architecture to micro-service architecture, adding new technologies like 
+      #       Golang and Kafka. This resulted in a 40% enhancement in the turnaround time for development and deployment
+
+      #     - Gained experience working with distributed systems concepts while developing the algo-trading platform, which 
+      #       involved coordinating multiple processes and managing data consistency across different components
+
+      #     - Planned the migration of legacy monolithic architecture to micro-service architecture, adding new technologies like
+      #       Golang and Kafka. This resulted in a 15% enhancement in the turnaround time for development and deployment
+      #   featuredLink:
+      #     enable: true
+      #     name: uTrade Solutions
+      #     url: https://utradesolutions.com
+      # - job: Full-stack Developer Intern
+      #   company: uTrade Solutions
+      #   companyUrl: https://utradesolutions.com
+      #   date: June 2018 - May 2019
+      #   content: >
+      #     - Collaborated with the Product Team to establish the business
+      #     specifications within the Fintech domain
+
+      #     - Solved complex technical issues using modern mobile and web technologies
+
+      #     - Presented technical solutions to senior executives, facilitating informed decision-making
+      #   featuredLink:
+      #     enable: true
+      #     name: uTrade Solutions
+      #     url: https://utradesolutions.com
   education:
     enable: true
     index: false
@@ -211,11 +246,11 @@ params:
         school:
           name: Chitkara University
           url: https://www.chitkara.edu.in
-      - title: High School
-        GPA: 8.2 out of 10
-        school:
-          name: Lawrance Public Senior Secondary School
-          url: https://www.lpsmohali.com
+      # - title: High School
+      #   GPA: 8.2 out of 10
+      #   school:
+      #     name: Lawrance Public Senior Secondary School
+      #     url: https://www.lpsmohali.com
   achievements:
     enable: false
     items:
@@ -226,6 +261,58 @@ params:
   projects:
     enable: true
     items:
+      - title: QUINTET - AI Powered Quantum Education Toolkit
+        content: >
+          This research introduces QUINTET, a novel containerized educational platform that eliminates this fragmentation by 
+          embedding interactive gamified modules and a customized quantum network simulation engine directly into a unified 
+          notebook environment. To provide real-time, context-aware support, the system integrates a dual-agent Artificial 
+          Intelligence framework driven by an active Retrieval-Augmented Generation pipeline, alongside a dynamic curriculum 
+          generator that personalizes learning paths based on a student's prior knowledge and time constraints. 
+        image: quantum_crypto.webp
+        badges:
+          - Python
+          - AI
+          - Quantum Cryptography
+          - LangChain
+          - Graduate Thesis
+        links:
+          - icon: fab fa-github
+            url: https://github.com/Sahil624/qToolkit
+
+      - title: QGrasp - Mobile app for quantum computing education
+        content: >
+          QuantumGrasp is a mobile app for quantum computing education. Students build circuits from physical playmats or on-screen controls, 
+          run on-device simulation, and see probabilities and circuit diagrams update in real time. The longer-term vision is a tactile, 
+          AR-forward experience (markers, 3D Bloch visualization, spatial measurement). 
+          The current build focuses on the learn → simulate → visualize loop on React Native / Expo. 
+        image: qgrasp.png
+        badges:
+          - ReactNative
+          - Expo
+          - Computer Vision
+          - Quantum Circuts
+          - Graduate Thesis
+        links:
+          - icon: fab fa-github
+            url: https://github.com/Sahil624/qGrasp?tab=readme-ov-file
+
+      - title: Quantum Simulator
+        content: >
+          QNS aims at facilitating Open-Ended Inquiry. Unlike traditional game-winning and game-losing conditions, 
+          QNS presents an open-ended scenario where students get to build their own network infrastructures and 
+          then watch their own designed functionality failing due to these modes, for instance, eavesdropping 
+          detection or decoherence. They develop from ‘sitting around and consuming knowledge’ to ‘actively 
+          building an understanding’ on their own. 
+        image: qsim.png
+        badges:
+          - Python
+          - AI
+          - Quantum Cryptography
+          - LangChain
+          - Graduate Thesis
+        links:
+          - icon: fab fa-github
+            url: https://github.com/ksucybersec/q-sim
 
       - title: Financial Knowledge Graph
         content: >
